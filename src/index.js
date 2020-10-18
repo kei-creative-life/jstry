@@ -152,3 +152,27 @@
 //   return num1 + num2 > 100 ? '100を越えています' : '許容範囲内です';
 // }
 // console.log(checkSum(50,40));
+
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+// 論理演算子の本当の意味をしろう && ||
+// Reactでも論理演算子を使うから、理解しておこう！
+// const flag1 = true;
+// const flag2 = false;
+
+// if(flag1 || flag2){
+//   console.log("1か2はtrue");
+// }
+
+// if(flag1 && flag2){
+//   console.log("1か2はtrue");
+// }
+
+// ||は左側がfalseなら右側を返す
+// const num = 100;
+// const fee = num || "金額未設定";
+// console.log(fee);
+
+// &&は左側が右側を返す
+const num2 = 100;
+const fee2 = num2 && "何か設定されました";
+console.log(fee2);
