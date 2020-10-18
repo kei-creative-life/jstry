@@ -88,50 +88,67 @@
 
 // 配列のコピー
 // const arr4 = [10, 20];
-// const arr5 = [30, 40];
+// // const arr5 = [30, 40];
 
-// const arr6 = [...arr4];
-// arr6[0] = 100;
-// console.log(arr4);
-// console.log(arr6);
+// // const arr6 = [...arr4];
+// // arr6[0] = 100;
+// // console.log(arr4);
+// // console.log(arr6);
 
-// // 配列の結合
-// const arr7 = [...arr4, ...arr5];
-// console.log(arr7);
+// // // 配列の結合
+// // const arr7 = [...arr4, ...arr5];
+// // console.log(arr7);
+
+// // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+// // map
+// // 従来型：for文
+// const nameArr = ["tanaka", "yamada", "honda"];
+// // for (let index = 0; index < nameArr.length; index++){
+// //   console.log(nameArr[index]);
+// // }
+
+// // map練習
+// // const nameArr2 = nameArr.map((name)=>{
+// //   return name;
+// // })
+// // console.log(nameArr2);
+
+// // mapなら簡潔！！
+// // indexは第2引数
+// // nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です`));
+
+// // // filter：何か条件に合うやつを抜き出す
+// // // 試しに奇数だけ取り出そう
+// // const numArr = [1, 2, 3, 4, 5];
+// // const newNumArr = numArr.filter((num) => {
+// //   return num % 2 === 1;
+// // });
+// // console.log(newNumArr);
+
+// // 条件に応じて配列の中身を変える
+// const newNameArr = nameArr.map((name) => {
+//   if (name === "honda") {
+//     return name;
+//   } else {
+//     return `${name}さん`;
+//   }
+// });
+
+// console.log(newNameArr);
 
 // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-// map
-// 従来型：for文
-const nameArr = ["tanaka", "yamada", "honda"];
-// for (let index = 0; index < nameArr.length; index++){
-//   console.log(nameArr[index]);
+// 三項演算子　ある条件？　条件がtrue : 条件がfalse
+// const val1 = 1>0 ? 'true' : 'false';
+// console.log(val1)
+
+// 例：数字のときは桁数を区切る！
+// typeofは変数のタイプを判別。toLocaleString()は数字を区切ってくれる関数
+// const num = 1300;
+// const formattedNum = typeof num === 'number' ? num.toLocaleString(): '数値を入力してください';
+// console.log(formattedNum);
+
+// // 例2
+// const checkSum = (num1,num2)=>{
+//   return num1 + num2 > 100 ? '100を越えています' : '許容範囲内です';
 // }
-
-// map練習
-// const nameArr2 = nameArr.map((name)=>{
-//   return name;
-// })
-// console.log(nameArr2);
-
-// mapなら簡潔！！
-// indexは第2引数
-// nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です`));
-
-// // filter：何か条件に合うやつを抜き出す
-// // 試しに奇数だけ取り出そう
-// const numArr = [1, 2, 3, 4, 5];
-// const newNumArr = numArr.filter((num) => {
-//   return num % 2 === 1;
-// });
-// console.log(newNumArr);
-
-// 条件に応じて配列の中身を変える
-const newNameArr = nameArr.map((name) => {
-  if (name === "honda") {
-    return name;
-  } else {
-    return `${name}さん`;
-  }
-});
-
-console.log(newNameArr);
+// console.log(checkSum(50,40));
